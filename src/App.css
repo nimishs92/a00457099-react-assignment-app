@@ -1,5 +1,10 @@
+/* change the link color */
+.nav-link-custom {
+  color: #ffbb00;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -27,6 +32,8 @@
 .App-link {
   color: #61dafb;
 }
+
+
 
 @keyframes App-logo-spin {
   from {
