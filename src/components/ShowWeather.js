@@ -24,24 +24,24 @@ class ShowWeather extends Component {
         return(
             <div>
                 <div className="row align-items-center">
-                    <div className="col-3">
-                        { this.state.temp_c < 10 ? <img src="cold.png" height="100" width="100"/> : undefined }
-                        { this.state.temp_c > 10 && this.state.temp_c < 20 ? <img src="mild.png" height="100" width="100"/> : undefined }
-                        { this.state.temp_c > 20 ? <img src="sunny.png" height="100" width="100"/> : undefined }
-                         
-                    </div>
-                    <div className="col-2 align-self-center">
-                        <h1>{this.state.selectedTemp === 'C' ? Math.round(this.state.temp_c) : Math.round(this.state.temp_f)}</h1>
-                    </div>
-                    <div className="col-2">
-                        <button class={this.state.selectedTemp === 'C' ? "btn btn-primary" : "btn btn-light"} onClick={() => this.setState({ selectedTemp: "C" })}>C</button>
-                        <button class={this.state.selectedTemp === 'F' ? "btn btn-primary" : "btn btn-light"} onClick={() => this.setState({ selectedTemp: "F" })}>F</button>
-                    </div>
-                </div>
-                
+                    <div className="col-6">
+                        <div className="row">
+                            <div className="col-6">
+                                {this.state.temp_c < 10 ? <img src="cold.png" height="100" width="100" /> : undefined}
+                                {this.state.temp_c > 10 && this.state.temp_c < 20 ? <img src="mild.png" height="100" width="100" /> : undefined}
+                                {this.state.temp_c > 20 ? <img src="sunny.png" height="100" width="100" /> : undefined}
 
-                
-                
+                            </div>
+                            <div className="col-3 align-self-center">
+                                <h1>{this.state.selectedTemp === 'C' ? Math.round(this.state.temp_c) : Math.round(this.state.temp_f)}</h1>
+                            </div>
+                            <div className="col-3">
+                                <button class={this.state.selectedTemp === 'C' ? "btn btn-primary" : "btn btn-light"} onClick={() => this.setState({ selectedTemp: "C" })}>C</button>
+                                <button class={this.state.selectedTemp === 'F' ? "btn btn-primary" : "btn btn-light"} onClick={() => this.setState({ selectedTemp: "F" })}>F</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </div>
         );
     }
